@@ -1,4 +1,5 @@
 import React from 'react'
+import s from './Message.module.css'
 
 type messageType = {
     avatar: string,
@@ -9,14 +10,15 @@ type messageType = {
 
 function Message({avatar,name,message,time}:messageType) {
     return (
-        <div>
+        <div className={s.message}>
             <div>
-                <img src={avatar}/>
+                <img src={avatar} alt={'avatar'} className={s.avatar}/>
             </div>
-            <div>
-                <div>{name}</div>
-                <div>{message}</div>
-                <div>{time}</div>
+            <div className={s.angle}></div>
+            <div className={s.content}>
+                <div className={s.name}>{name}</div>
+                <div className={s.message}>{message}</div>
+                <div className={s.times}>{time}</div>
             </div>
         </div>
     )
