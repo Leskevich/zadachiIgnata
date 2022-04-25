@@ -16,17 +16,21 @@ beforeEach(() => {
 
 test('filter by all', () => {
     const newState = filterAffairs(initialState, 'all')
+    // @ts-ignore
     expect(newState.length).toBe(6)
 })
 test('filter by high', () => {
     const newState = filterAffairs(initialState, 'high')
+    // @ts-ignore
     expect(newState.length).toBe(2)
 })
 test('filter by middle', () => {
     const newState = filterAffairs(initialState, 'middle')
+    // @ts-ignore
     expect(newState.length).toBe(1)
 })
 test('filter by low', () => {
     const newState = filterAffairs(initialState, 'low')
+    // @ts-ignore
     expect(newState.length).toBe(3)
 })
